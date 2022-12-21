@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <script src="index.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <title>みちなちクリスマスデート</title>
@@ -15,14 +14,42 @@
     <div class="l-hero">
         <div class="l-hero-wrapper" id="wrapper">
             <!-- 表紙 -->
-            <div class="l-hero-panel l-hero-panel-01 panel" id="panel01">
+            <!-- <div class="l-hero-panel l-hero-panel-01 panel" id="panel01">
                 <p class="l-hero-panel__contents">みちとなち<br>の<br>クリスマス<br>箱根&相模湖イルミ<br>in<br>2022</p>
+            </div> -->
+
+            <div class="l-hero-panel l-hero-panel-01 panel" id="panel01">
+                <div class="top-background-color">
+                    <div class="top-text-area">
+                      <h1 class="top-text">クリスマスデート</h1>
+                      <p class="top-p top-text">in</p>
+                      <p class="top-p top-text">箱根&相模湖イルミ</p>
+                      <p class="top-title">
+                        <span>M</span>
+                        <span>e</span>
+                        <span>r</span>
+                        <span>r</span>
+                        <span>y</span>
+                        <span>&nbsp</span><br>
+                        <span>C</span>
+                        <span>h</span>
+                        <span>r</span>
+                        <span>i</span>
+                        <span>s</span>
+                        <span>t</span>
+                        <span>m</span>
+                        <span>a</span>
+                        <span>s</span>
+                      </p>
+                    </div>
+                  </div>
             </div>
 
             <!-- 1日目 -->
-            <div class="l-hero-panel l-hero-panel-02 panel" id="panel02">
+            <!-- <div class="l-hero-panel l-hero-panel-02 panel" id="panel02">
                 <p class="l-hero-panel__contents_day">DAY1</p>
-            </div>
+            </div> -->
+        
 
             <div class="l-hero-panel l-hero-panel-03 panel" id="panel03">
                 <div class="l-hero-panel__contents">
@@ -205,6 +232,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
 
     <script>
+
+        //1.5秒かけ黒色背景を表示
+        gsap.to(".top-background-color", {
+        duration: 1, //アニメーションの時間の設定
+        opacity: 1, //表示状態の指定
+        });
+
+        //.textを1.5秒かけ出現させ1.5秒かけ逆再生させ初期状態に戻す
+        gsap.to(".top-text", {
+        delay: 1, //アニメーションの初期遅延（アニメーションが開始されるまでの指定）
+        duration: 1, //アニメーションの時間の設定
+        opacity: 1, //表示状態の指定
+        y: "0px", //cssでY軸-20pxから完了時0pxへの指定
+        yoyo: true, //trueにすることで上記で指定したY軸の動きの逆再生
+        repeat: 1, //yoyoのリピート回数
+        //同じclass名のバリデーションの設定
+        stagger: {
+            each: 0.5, //ディレイ時間
+        },
+        });
+
+        //初期遅延3.5秒かけてから.titleを表示
+        gsap.to(".top-title span", {
+        delay: 4.5, //アニメーションの初期遅延（アニメーションが開始されるまでの指定）
+        duration: 1.5, //アニメーションの時間の設定
+        opacity: 1, //表示状態の指定
+        //同じclass名のバリデーションの設定
+        stagger: {
+            each: 0.2, //ディレイ時間
+            from: "start", //出現方法の指定
+        },
+        });
+
+
+        
+
+
         const wrapper = document.querySelector('#wrapper');
         if(wrapper) {
             // gsap.registerPlugin(ScrollTrigger); // npm/yarnの際に必要
