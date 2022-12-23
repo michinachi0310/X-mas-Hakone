@@ -1,3 +1,78 @@
+.steam {
+    position: absolute;
+    z-index: 2;
+    top: 340px;
+    left: 110px;
+    -webkit-animation: steam_Move 18s infinite linear;
+    animation: steam_Move 18s infinite linear;
+    transition: all 1s;
+  
+}
+
+.move {
+    z-index: 3;
+    position: absolute;
+    top: 340px;
+    left: 100px;
+    -webkit-animation: steam_Move 18s infinite linear;
+    animation: steam_Move 18s infinite linear;
+    transition: all 1s;
+    
+}
+
+.steam2 {
+    display: none;
+}
+
+@keyframes steam_Move {
+    0% {
+        filter: blur(10px);
+        transform: rotateY(0deg);
+        transform: scale(1, 1);
+        opacity: 0.75;
+        top: 340px;
+    }
+    33% {
+        transform: rotateY(40deg);
+        transform: scale(0.6, 1.2);
+    }
+    66% {
+        transform: rotateY(2deg);
+        transform: scaleY(1.2, 0.4);
+    }
+    100% {
+        filter: blur(16px);
+        transform: rotateY(50deg);
+        transform: scaleY(1.4, 1.2);
+        opacity: 0;
+        top: -600px;
+    }
+}
+ @-webkit-keyframes steam_Move {
+    0% {
+        -webkit-filter: blur(10px);
+        -webkit-transform: rotateY(0deg);
+        -webkit-transform: scale(1, 1);
+        opacity: 0.75;
+        top: 340px;
+    }
+    33% {
+        -webkit-transform: rotateY(40deg);
+        -webkit-transform: scale(0.8, 1.2);
+    }
+    66% {
+        -webkit-transform: rotateY(2deg);
+        -webkit-transform: scaleY(1.2, 0.6);
+    }
+
+    100% {
+        -webkit-filter: blur(16px);
+        -webkit-transform: rotateY(50deg);
+        -webkit-transform: scaleY(1.4, 1.2);
+        top: -600px;
+        opacity: 0;
+    }
+}
 // トップページ
 .top-text-area {
 	width: 100%;
@@ -205,6 +280,8 @@
     }
 }
 //==========電車
+
+
 
 .l-hero {
 	overflow: hidden;
