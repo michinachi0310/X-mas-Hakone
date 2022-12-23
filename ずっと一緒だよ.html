@@ -100,8 +100,21 @@
             </div>
 
             <!-- 2日目 -->
+            <!-- <div class="l-hero-panel l-hero-panel-05 panel" id="panel05">
+                <p class="l-hero-panel__contents_day">DAY2</p>
+            </div> -->
+
             <div class="l-hero-panel l-hero-panel-05 panel" id="panel05">
                 <p class="l-hero-panel__contents_day">DAY2</p>
+                <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                <div class="demo_stage">
+                    <span class="demo_item2"></span>
+                    <div class="demo_wrap" data-order="left">
+                        <span class="demo_item anime"></span>
+                    </div>
+                </div>
             </div>
 
             <div class="l-hero-panel l-hero-panel-06 panel" id="panel06">
@@ -247,7 +260,8 @@
 
         </div>
     </div>
-      
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
@@ -571,6 +585,17 @@
         });
         //==========ほし
         
+        //==========電車
+        $(document).ready(function(){
+            $('.demo_wrap').on('animationend', function () {
+                if ($(this).attr('data-order') === 'left') {
+                    $(this).attr('data-order', 'right');
+                } else {
+                    $(this).attr('data-order', 'left');
+                }
+            });
+        });  
+        //==========電車   
 
 
         const wrapper = document.querySelector('#wrapper');
