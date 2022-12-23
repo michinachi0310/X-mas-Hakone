@@ -20,39 +20,47 @@
 
             <div class="l-hero-panel l-hero-panel-01 panel" id="panel01">
                 <div class="top-background-color">
-                    <div class="top-text-area">
-                      <h1 class="top-text">クリスマスデート</h1>
-                      <p class="top-p top-text">in</p>
-                      <p class="top-p top-text">箱根&相模湖イルミ</p>
-                      <p class="top-title">
-                        <span>M</span>
-                        <span>e</span>
-                        <span>r</span>
-                        <span>r</span>
-                        <span>y</span>
-                        <span>&nbsp</span><br>
-                        <span>C</span>
-                        <span>h</span>
-                        <span>r</span>
-                        <span>i</span>
-                        <span>s</span>
-                        <span>t</span>
-                        <span>m</span>
-                        <span>a</span>
-                        <span>s</span>
-                      </p>
+                    <div id="particles-js"></div>
+                    <div id="wrapper-star">
+                        <div class="top-text-area">
+                            <h1 class="top-text">クリスマスデート</h1>
+                            <p class="top-p top-text">in</p>
+                            <p class="top-p top-text">箱根&相模湖イルミ</p>
+                            <p class="top-title">
+                                <span>M</span>
+                                <span>e</span>
+                                <span>r</span>
+                                <span>r</span>
+                                <span>y</span>
+                                <span>&nbsp</span><br>
+                                <span>C</span>
+                                <span>h</span>
+                                <span>r</span>
+                                <span>i</span>
+                                <span>s</span>
+                                <span>t</span>
+                                <span>m</span>
+                                <span>a</span>
+                                <span>s</span>
+                            </p>
+                        </div>
                     </div>
-                  </div>
+                </div>
             </div>
 
             <!-- 1日目 -->
             <div class="l-hero-panel l-hero-panel-02 panel" id="panel02">
-                <p class="l-hero-panel__contents_day">DAY1</p>
+                <div id="particles-js-2"></div>
+                    <div id="wrapper-star-2">
+                    <p class="l-hero-panel__contents_day">DAY1</p>
+                    <img src="/media/images/sumikko_p1.png" width="100%" style="margin-top:100%;">
+                </div>
             </div>
         
 
             <div class="l-hero-panel l-hero-panel-03 panel" id="panel03">
-                <div class="l-hero-panel__contents">
+                <div id="particles-js-3"></div>
+                <div id="wrapper-star-3">
                     <p class="text"><span class="time">08:20</span> 久米川駅 出発</p>
                     <p class="text"><span class="time">09:15</span> 東京モード学園前バス停集合</p>
                     <p class="text"><span class="time">09:30</span> バス出発 高速道</p>
@@ -76,7 +84,19 @@
             </div>
 
             <div class="l-hero-panel l-hero-panel-04 panel" id="panel04">
-                <p class="l-hero-panel__contents">Panel 4/4</p>
+                <div class="top-background-color">
+                    <div id="particles-js-4"></div>
+                    <div id="wrapper-star-4">
+                        <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                        <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                        <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                        <img src="/media/images/sumikko_p6.jpg" width="100%">
+                        <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                        <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                        <p class="text_detail"><span class="time time_transparent">00:00</span></p>
+                        <img src="/media/images/header_character_left1_sumikko.gif" width="100%">
+                    </div>
+                </div>
             </div>
 
             <!-- 2日目 -->
@@ -221,7 +241,8 @@
             </div>
 
             <div class="l-hero-panel l-hero-panel-15 panel" id="panel15">
-                <p class="l-hero-panel__contents">Panel 4/5</p>
+                <div class="l-hero-panel__contents">
+                </div>
             </div>
 
         </div>
@@ -230,9 +251,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollToPlugin.min.js"></script>
-
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-
+        // ========== TOP
         //1.5秒かけ黒色背景を表示
         gsap.to(".top-background-color", {
         duration: 1, //アニメーションの時間の設定
@@ -264,8 +285,291 @@
             from: "start", //出現方法の指定
         },
         });
+        // ========== TOP
 
 
+        // ==========ほし
+        particlesJS("particles-js", {
+            "particles":{
+                "number":{
+                    "value":500,//この数値を変更すると星の数が増減できる
+                    "density":{
+                        "enable":true,
+                        "value_area":800
+                    }
+                },
+                "color":{
+                    "value":"#ffffff"
+                },
+                "shape":{
+                    "type":"circle",//形状はcircleを指定
+                    "stroke":{
+                        "width":0
+                    },
+                    },
+                "opacity":{
+                    "value":1,//シェイプの透明度
+                    "random":true,//シェイプの透明度をランダムにする
+                    "anim":{
+                        "enable":true,//シェイプの透明度をアニメーションさせる
+                        "speed":3,//シェイプの透明度をアニメーションさせる
+                        "opacity_min":0,//透明度の最小値０
+                        "sync":false//全てを同時にアニメーションさせない
+                    }
+                },
+                "size":{
+                    "value":2,
+                    "random":true,
+                    "anim":{
+                        "enable":false,
+                        "speed":4,
+                        "size_min":0.3,
+                        "sync":false
+                    }
+                },
+                "line_linked":{
+                    "enable":false,
+                },
+                "move":{
+                    "enable":true,
+                    "speed":120,//この数値を小さくするとゆっくりな動きになる
+                "direction":"none",//方向指定なし
+                "random":true,//動きはランダムに
+                "straight":true,//動きをとどめる
+                    "out_mode":"out",
+                    "bounce":false,
+                    "attract":{
+                        "enable":false,
+                        "rotateX":600,
+                        "rotateY":600
+                    }
+                }
+            },
+            "interactivity":{
+                "detect_on":"canvas",
+                "events":{
+                    "onhover":{
+                        "enable":false,
+                    },
+                    "onclick":{
+                        "enable":false,
+                    },
+                    "resize":true
+                }
+            },
+            "retina_detect":true
+        });
+        particlesJS("particles-js-2", {
+            "particles":{
+                "number":{
+                    "value":500,//この数値を変更すると星の数が増減できる
+                    "density":{
+                        "enable":true,
+                        "value_area":800
+                    }
+                },
+                "color":{
+                    "value":"#ffffff"
+                },
+                "shape":{
+                    "type":"circle",//形状はcircleを指定
+                    "stroke":{
+                        "width":0
+                    },
+                    },
+                "opacity":{
+                    "value":1,//シェイプの透明度
+                    "random":true,//シェイプの透明度をランダムにする
+                    "anim":{
+                        "enable":true,//シェイプの透明度をアニメーションさせる
+                        "speed":3,//シェイプの透明度をアニメーションさせる
+                        "opacity_min":0,//透明度の最小値０
+                        "sync":false//全てを同時にアニメーションさせない
+                    }
+                },
+                "size":{
+                    "value":2,
+                    "random":true,
+                    "anim":{
+                        "enable":false,
+                        "speed":4,
+                        "size_min":0.3,
+                        "sync":false
+                    }
+                },
+                "line_linked":{
+                    "enable":false,
+                },
+                "move":{
+                    "enable":true,
+                    "speed":120,//この数値を小さくするとゆっくりな動きになる
+                "direction":"none",//方向指定なし
+                "random":true,//動きはランダムに
+                "straight":true,//動きをとどめる
+                    "out_mode":"out",
+                    "bounce":false,
+                    "attract":{
+                        "enable":false,
+                        "rotateX":600,
+                        "rotateY":600
+                    }
+                }
+            },
+            "interactivity":{
+                "detect_on":"canvas",
+                "events":{
+                    "onhover":{
+                        "enable":false,
+                    },
+                    "onclick":{
+                        "enable":false,
+                    },
+                    "resize":true
+                }
+            },
+            "retina_detect":true
+        });
+        particlesJS("particles-js-3", {
+            "particles":{
+                "number":{
+                    "value":500,//この数値を変更すると星の数が増減できる
+                    "density":{
+                        "enable":true,
+                        "value_area":800
+                    }
+                },
+                "color":{
+                    "value":"#ffffff"
+                },
+                "shape":{
+                    "type":"circle",//形状はcircleを指定
+                    "stroke":{
+                        "width":0
+                    },
+                    },
+                "opacity":{
+                    "value":1,//シェイプの透明度
+                    "random":true,//シェイプの透明度をランダムにする
+                    "anim":{
+                        "enable":true,//シェイプの透明度をアニメーションさせる
+                        "speed":3,//シェイプの透明度をアニメーションさせる
+                        "opacity_min":0,//透明度の最小値０
+                        "sync":false//全てを同時にアニメーションさせない
+                    }
+                },
+                "size":{
+                    "value":2,
+                    "random":true,
+                    "anim":{
+                        "enable":false,
+                        "speed":4,
+                        "size_min":0.3,
+                        "sync":false
+                    }
+                },
+                "line_linked":{
+                    "enable":false,
+                },
+                "move":{
+                    "enable":true,
+                    "speed":120,//この数値を小さくするとゆっくりな動きになる
+                "direction":"none",//方向指定なし
+                "random":true,//動きはランダムに
+                "straight":true,//動きをとどめる
+                    "out_mode":"out",
+                    "bounce":false,
+                    "attract":{
+                        "enable":false,
+                        "rotateX":600,
+                        "rotateY":600
+                    }
+                }
+            },
+            "interactivity":{
+                "detect_on":"canvas",
+                "events":{
+                    "onhover":{
+                        "enable":false,
+                    },
+                    "onclick":{
+                        "enable":false,
+                    },
+                    "resize":true
+                }
+            },
+            "retina_detect":true
+        });
+        particlesJS("particles-js-4", {
+            "particles":{
+                "number":{
+                    "value":500,//この数値を変更すると星の数が増減できる
+                    "density":{
+                        "enable":true,
+                        "value_area":800
+                    }
+                },
+                "color":{
+                    "value":"#ffffff"
+                },
+                "shape":{
+                    "type":"circle",//形状はcircleを指定
+                    "stroke":{
+                        "width":0
+                    },
+                    },
+                "opacity":{
+                    "value":1,//シェイプの透明度
+                    "random":true,//シェイプの透明度をランダムにする
+                    "anim":{
+                        "enable":true,//シェイプの透明度をアニメーションさせる
+                        "speed":3,//シェイプの透明度をアニメーションさせる
+                        "opacity_min":0,//透明度の最小値０
+                        "sync":false//全てを同時にアニメーションさせない
+                    }
+                },
+                "size":{
+                    "value":2,
+                    "random":true,
+                    "anim":{
+                        "enable":false,
+                        "speed":4,
+                        "size_min":0.3,
+                        "sync":false
+                    }
+                },
+                "line_linked":{
+                    "enable":false,
+                },
+                "move":{
+                    "enable":true,
+                    "speed":120,//この数値を小さくするとゆっくりな動きになる
+                "direction":"none",//方向指定なし
+                "random":true,//動きはランダムに
+                "straight":true,//動きをとどめる
+                    "out_mode":"out",
+                    "bounce":false,
+                    "attract":{
+                        "enable":false,
+                        "rotateX":600,
+                        "rotateY":600
+                    }
+                }
+            },
+            "interactivity":{
+                "detect_on":"canvas",
+                "events":{
+                    "onhover":{
+                        "enable":false,
+                    },
+                    "onclick":{
+                        "enable":false,
+                    },
+                    "resize":true
+                }
+            },
+            "retina_detect":true
+        });
+        //==========ほし
         
 
 

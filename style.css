@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .top-text-area {
   width: 100%;
   height: 100vh;
@@ -30,7 +31,9 @@
 .top-text {
   opacity: 0;
   transform: translateY(20px);
-  color: #ffffff;
+  color: transparent;
+  background: repeating-linear-gradient(0deg, #757575 0.1em, #9E9E9E 0.2em, #E8E8E8 0.3em, #9E9E9E 0.4em, #757575 0.5em);
+  -webkit-background-clip: text;
 }
 
 .top-title {
@@ -43,7 +46,72 @@
 
 .top-title span {
   opacity: 0;
-  color: #ffffff;
+  background: repeating-linear-gradient(0deg, #B67B03 0.1em, #DAAF08 0.2em, #FEE9A0 0.3em, #DAAF08 0.4em, #B67B03 0.5em);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#particles-js {
+  position: fixed; /*描画固定*/
+  z-index: 3; /*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color: #020E34; /*背景色*/
+}
+
+#wrapper-star {
+  position: relative; /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 4; /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  width: 100%;
+  height: 100%;
+}
+
+#particles-js-2 {
+  position: fixed; /*描画固定*/
+  z-index: 3; /*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color: #020E34; /*背景色*/
+}
+
+#wrapper-star-2 {
+  position: relative; /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 4; /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  width: 100%;
+  height: 100%;
+  padding-top: 30%;
+}
+
+#particles-js-3 {
+  position: fixed; /*描画固定*/
+  z-index: 3; /*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color: #020E34; /*背景色*/
+}
+
+#wrapper-star-3 {
+  position: relative; /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 4; /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  width: 100%;
+  height: 100%;
+  padding-top: 20%;
+}
+
+#particles-js-4 {
+  position: fixed; /*描画固定*/
+  z-index: 3; /*描画を一番下に*/
+  width: 100%;
+  height: 100%;
+  background-color: #020E34; /*背景色*/
+}
+
+#wrapper-star-4 {
+  position: relative; /*描画を#particles-jsよりも上にするためposition:relative;を指定*/
+  z-index: 4; /*z-indexの数字を大きくすることで描画を#particles-jsよりも上に*/
+  width: 100%;
+  height: 100%;
+  padding-top: 20%;
 }
 
 .l-hero {
@@ -77,9 +145,6 @@
 .l-hero .l-hero-panel-03 {
   background-image: url(./media/images/day1.jpg);
 }
-.l-hero .l-hero-panel-04 {
-  background-image: url(./media/images/day1.jpg);
-}
 .l-hero .l-hero-panel-05 {
   background-image: url(./media/images/day2.jpg);
 }
@@ -111,7 +176,7 @@
   background-image: url(./media/images/day3.jpg);
 }
 .l-hero .l-hero-panel-15 {
-  background-image: url(./media/images/day3.jpg);
+  background-color: #000;
 }
 .l-hero .l-hero-panel::after {
   content: "";
@@ -145,6 +210,9 @@
   position: relative;
   text-transform: uppercase;
   z-index: 3;
+  position: absolute;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
 .l-hero .text {
   flex: 0 0 100%;
