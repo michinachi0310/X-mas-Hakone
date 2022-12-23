@@ -309,6 +309,18 @@
     opacity: 0;
   }
 }
+.wave-top {
+  flex: 0 0 100%;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  font-size: 24px;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 3;
+  padding-top: 83%;
+}
+
 .parallax > use {
   -webkit-animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
           animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
@@ -364,7 +376,7 @@
   position: relative;
 }
 .l-hero .l-hero-wrapper {
-  width: 1500%;
+  width: 1300%;
   height: 100vh;
   display: flex;
   flex-wrap: nowrap;

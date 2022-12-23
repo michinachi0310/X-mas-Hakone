@@ -1,4 +1,3 @@
-
 // トップページ
 .top-text-area {
 	width: 100%;
@@ -286,6 +285,18 @@
 }
 //==========湯気
 
+//==========なみ
+.wave-top{
+	flex: 0 0 100%;
+	text-align: center;
+	font-weight: 700;
+	color: #fff;
+	font-size: 24px;
+	position: relative;
+	text-transform: uppercase;
+	z-index: 3;
+	padding-top: 83%;
+}
 .parallax > use {
 	animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
   }
@@ -314,13 +325,14 @@
 	}
   }
 
+//==========なみ
   
 
 .l-hero {
 	overflow: hidden;
 	position: relative;
 	.l-hero-wrapper {
-		width: 1500%;
+		width: 1300%;
 		height: 100vh;
 		display: flex;
 		flex-wrap: nowrap;
