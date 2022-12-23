@@ -170,7 +170,7 @@
 
             </div>
 
-            <!-- 3日目 -->
+           
             <div class="l-hero-panel l-hero-panel-08 panel" id="panel08">
                 <div class="l-hero-panel__contents">
                     <div class="steam">
@@ -271,7 +271,23 @@
             </div>
 
             <div class="l-hero-panel l-hero-panel-14 panel" id="panel14">
-                <p class="l-hero-panel__contents">Panel 4/5</p>
+                <div class="l-hero-panel__contents">
+                    <p class="text"><span class="time"></span></p>
+                    <div>
+                        <svg class="waves" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"
+                        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                        </g>
+                        </svg>
+                        </div>
+                </div>
             </div>
 
             <div class="l-hero-panel l-hero-panel-15 panel" id="panel15">
@@ -625,6 +641,10 @@
             $(".steam2").addClass("move");
         }, 8500)});
         //==========湯気
+
+       
+
+
         const wrapper = document.querySelector('#wrapper');
         if(wrapper) {
             // gsap.registerPlugin(ScrollTrigger); // npm/yarnの際に必要
@@ -667,6 +687,7 @@
                 });
             });
         }
+
     </script>
     <!-- <script src="index.js"></script> -->
     
